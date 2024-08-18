@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Push to Array</title>
+</head>
+<body>
+    <h1>Push Textbox Value to Array</h1>
+    <input type="text" id="myTextbox" placeholder="Enter something">
+    <button id="myButton">Add to Array</button>
+
+    <script>
+        // Initialize an empty array
+        const myArray = [];
+
+        // Get the button element and add a click event listener
+        document.getElementById('myButton').addEventListener('click', function() {
+            // Get the value from the textbox
+            const textboxValue = document.getElementById('myTextbox').value;
+            
+            // Push the value to the array
+            myArray.push(textboxValue);
+
+            // Print the array in the console
+            console.log(myArray);
+
+            // Clear the textbox after pushing the value
+            document.getElementById('myTextbox').value = '';
+        });
+    </script>
+</body>
+</html>
